@@ -1,0 +1,138 @@
+html, body {
+	width: 100%;
+	height: 100%
+	margin: 0;
+	/*This should always be at the top of your CSS for now.*/
+}
+/*Never use a naked HTML tag as a CSS selector, its not good
+for specificity. Instead use the tag plus a class, or
+just the class alone. Never use ID for CSS, save that for
+JavaScript.*/
+.widget {
+	display: flex;
+}
+.button {
+	border-radius: 2px;
+	text-decoration: none;
+	/*Gets rid of the underline on a link.*/
+
+}
+.container{
+	box-sizing: border-box;
+	/*This makes it so that the size of the body doesn't 
+	go over 100% if you add margins, padding, etc.*/
+	width: calc(100% - 300px);
+	/*Makes it so that what ever is left on the page after 
+	the 300px will be fully taken up by other stuff. 
+	This is fairly new but has good support.*/
+}
+.footer {
+	bottom: 0;
+	/*Puts the footer all the way at the bottom of the page.*/
+}
+.pic {
+	width: 100%;
+	height: auto;
+}
+/*Read up on BEM naming scheme for naming classes.*/
+.rectangle {
+	width: 100%;
+	height: 50%;
+	padding: 10px;
+	/*This padding will make the window larger than 
+	the page and you will get scrolling as a result.
+	This is because the width is 100% + 10px. 
+	Use border-box to fix.*/
+	box-sizing: border-box;
+	/*Fixes the scrolling problem.
+	Works great for making layouts that are dynamic
+	and responsive*/
+}
+.thing {
+	padding: 5px;
+	/*padding is part of the box model. All the box model
+	does is specify how tall and wide things are on a page.*/
+}
+.box {
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+	background: #000;
+	float: left;
+	transition: background 0.8s ease;
+	/*check out transition later.*/
+}
+.box:hover {
+	background: blue;
+	/*hover makes the box turn blue when you hover over it.*/
+}
+.box:active {
+	background: green;
+	/*box changes color when you click on it with active pseudo-selector.*/
+}
+.box:first-child {
+	background: purple;
+	/*specifies only the first child of the parent element.*/
+}
+.box:nth-child(even) {
+	background: #0000ff;
+	/*colors in only the even children of the parent element.*/
+}
+@media print{
+/*media query- print, screen, etc. It's like using a simple if statement
+to apply certain styling based on different conditions. Used to be used
+based on screen size, thats really bad practice now. Now responsiveness 
+is based on browser window size. Use min/max width to make the styling change
+based on browser size. Design "mobile first". Generally just use 3
+different stylings based on browser sizes.*/
+	.box {
+		height: 100px;
+		width: 100px;
+		margin: 10px;
+		background: #000;
+		float: left;
+	}
+}
+@media screen and (max-width: 480px) {
+	/*styling in the media query will only be applied when 
+	the browser window is at most 480px wide.*/
+	/*you may also use "or" instead of "and"*/
+	.box {
+		height: 100px;
+		width: 100px;
+		margin: 10px;
+		background: #000;
+		float: left;
+	}
+}
+@media screen and (max-width: 480px) and (orientation: portrait){
+	/*orientation specifies what the page will look like when a mobile
+	device is seeing it in portrait/landscape mode.*/
+	.box {
+		height: 100px;
+		width: 100px;
+		margin: 10px;
+		background: #000;
+		float: left;
+	}
+}
+
+
+/*once you have mastered CSS, you can move on to a pre-processed
+language like SASS.*/
+
+
+.box {
+	height: 100px;
+	width: 100px;
+	background: red;
+	margin: 10px;
+}
+.orange + .box {
+	/*sibling selector- "for the very next sibling, do this."*/
+	background: blue;
+}
+.container > .box {
+	/*targets only the direct children of the parent selector.*/
+	background: blue;
+}
