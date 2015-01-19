@@ -31,6 +31,37 @@ var thing = outerFunction();
 thing
 //
 
+//also this --->
+var mantle = function() {
+  var temp = 'Hot enough to be ductile!';
+  return function() {
+    alert(temp);
+  };
+};
+
+mantle
+// function () {
+//   var temp = 'Hot enough to be ductile!';
+//   return function() {
+//     alert(temp);
+//   };
+// }
+
+mantle();
+// function () {
+//     alert(temp);
+//   }
+
+var crust = mantle();
+
+crust
+// function () {
+//     alert(temp);
+//   }
+
+crust();
+//
+
 // Write the function definition.
 
 var innerFn = makeCounter();

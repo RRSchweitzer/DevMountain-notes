@@ -131,7 +131,7 @@ Car.prototype.stop = function(){
 
 What does the 'new' keyword do in JavaScript?
 
-1) creates an object called this
+1) creates an object called this.
 2) uses object.create to create an object, which delegates to the constructors prototype.
 3) returns the this object.
 
