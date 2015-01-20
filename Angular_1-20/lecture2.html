@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head ng-app="FriendsApp">
+		<meta charset="UTF-8"/>
+		<title>Document</title>
+	</head>
+	<body ng-controller="mainCtrl">
+		<h3>My Friends</h3>
+		<input type="text" ng-model="newFriend"/>
+		<button ng-click="addFriend()">Submit</button>
+		<ul>
+			<li ng-repeat="friend in friends">{{friend}}</li>
+		</ul>
+
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+		<script type="text/javascript" src="lecture2.js"></script>
+	</body>
+</html>
