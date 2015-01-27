@@ -1,0 +1,9 @@
+to start node.js server in terminal, do:
+	
+	http-server 'file'
+
+or in terminal, just navigate into the directory of the project you are working on and do:
+	
+	http-server
+
+to stop node.js server do control-C
