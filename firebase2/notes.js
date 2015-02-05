@@ -9,3 +9,6 @@ $add //angular fire
 $save
 
 $remove
+
+// Tyler's Lecture on authentification--->
+
