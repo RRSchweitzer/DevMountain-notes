@@ -14,5 +14,6 @@ smurfs();
 
 
 var http = require('http');
+
 http.createServer(onRequest).listen(12200); //port 443 = SSL, port 80 = normal
 console.log('Hey breh, listening on port 12200');
