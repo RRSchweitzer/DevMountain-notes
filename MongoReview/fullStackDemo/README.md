@@ -1,0 +1,14 @@
+Jacob's process for making an app:
+- get idea
+- map out what you will need in the back end: authentication, models, endpoints, etc.
+- make server.js structure
+- authentication
+	- google client id: google developers console
+	- apis with auth > credentials - client id & client secret
+	- oath login-scopes
+- express, passport, GoogleStragety.OAuth2Strategy, body-parser, session
+- serializer/deserializer
+- Mongoose & mongo. mongoURI, Mongoose.connect, Mongoose.connection.once, etc. 27017
+- save a user with authenticaton
+	- create a controller to update or create user every time you log in with google. Think about it for a sec.
+	- 
